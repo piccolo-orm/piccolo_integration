@@ -1,0 +1,21 @@
+name: Test Suite
+
+on:
+  workflow_dispatch
+
+jobs:
+    install:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                python-version: [3.7, 3.8, 3.9]
+
+        steps:
+            - name: Set up Python ${{ matrix.python-version }}
+              uses: actions/setup-python@v2
+              with:
+                  python-version: ${{ matrix.python-version }}
+            - name: Install Piccolo, and make sure the CLI works
+              run: |
+                  pip install git+https://github.com/piccolo-orm/piccolo.git
+                  piccolo
