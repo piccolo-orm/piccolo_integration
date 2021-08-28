@@ -3,7 +3,8 @@
 The aim of this repo is to setup a GitHub action which will do the following:
 
  * Install Piccolo, Piccolo API, and Piccolo Admin, from their GitHub master branches.
- * Run the Cypress integration tests from Piccolo Admin
+ * Make sure the Piccolo CLI runs correctly.
+ * Run the Cypress integration tests from Piccolo Admin.
 
 This would provide a great deal of confidence that the entire stack works as expected.
 
