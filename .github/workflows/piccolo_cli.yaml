@@ -17,5 +17,5 @@ jobs:
                   python-version: ${{ matrix.python-version }}
             - name: Install Piccolo, and make sure the CLI works
               run: |
-                  pip install git+https://github.com/piccolo-orm/piccolo.git[all]
+                  pip install "piccolo[all] @ git+https://github.com/piccolo-orm/piccolo.git"
                   piccolo
